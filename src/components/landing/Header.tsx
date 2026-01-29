@@ -2,8 +2,8 @@ import { Container } from '../layout/Container'
 import logo from '../../assets/logo.png'
 
 const navItems = [
-  { href: '#methods', label: 'Методы' },
-  { href: '#documents', label: 'Аттестации' },
+  { href: '#services', label: 'Методы' },
+  { href: '#certifications', label: 'Аттестации' },
   { href: '#geography', label: 'География' },
   { href: '#reasons', label: 'Почему мы' },
   { href: '#contacts', label: 'Контакты' },

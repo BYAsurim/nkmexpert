@@ -4,7 +4,7 @@ import { Section } from '../layout/Section'
 export function Documents() {
   return (
     <Section
-      id="documents"
+      id="certifications"
       title="Аттестации и нормативы"
       subtitle="Документы и допуски, подтверждающие выполнение работ по нормативной базе."
     >

@@ -51,7 +51,7 @@ export const landingContent = {
   ],
   contacts: {
     phone: '+7 981 909-06-38',
-    email: 'nkmexpert@gmail.com',
+    email: 'info@nkm-expert.ru',
     addressNote: 'Адрес: по запросу',
   } satisfies ContactInfo,
 } as const

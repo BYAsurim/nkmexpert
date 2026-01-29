@@ -4,7 +4,7 @@ import { Section } from '../layout/Section'
 export function Methods() {
   return (
     <Section
-      id="methods"
+      id="services"
       title="Услуги / методы неразрушающего контроля"
       subtitle="Контроль качества сварных соединений различными методами НК."
     >
