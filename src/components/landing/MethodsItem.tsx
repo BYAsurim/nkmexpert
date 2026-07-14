@@ -1,21 +1,31 @@
 "use client";
 
-import { Section } from '../layout/Section';
-import { Link } from 'react-router-dom';
-import Button from '../../ui/button';
+import { useParams, Link } from "react-router-dom";
+import { landingContent } from "../../landing/content";
+import Button from "@/components/ui/button";
 
-export function MethodsItem({ method }) {
+export function MethodsItem() {
+  const { method } = useParams<{ method: string }>();
+  const methodData = landingContent.methods.find(
+    (m) => m.short.toLowerCase() === (method ?? "").toLowerCase(),
+  );
+
+  if (!methodData) {
+    return <div>Метод не найден.</div>;
+  }
+
   return (
     <article className="card">
       <Link
-        to={`/services/${method.short.toLowerCase()}`}
+        to={`/services/${methodData.short.toLowerCase()}`}
         className="cardTitle"
       >
-        {method.short}
+        {methodData.short}
       </Link>
-      {method.full && (
+      {methodData.full && (
         <p className="cardText">
-          {method.full} В нашем центре сварных соединений мы проводим контроль качества сварных соединений различными методами НК.
+          {methodData.full} В нашем центре сварных соединений мы проводим
+          контроль качества сварных соединений различными методами НК.
         </p>
       )}
       <Button variant="default">Подробнее</Button>

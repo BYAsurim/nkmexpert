@@ -1,21 +1,21 @@
 "use client";
 
-import { createBrowserRouter } from 'react-router-dom';
-import { LandingPage } from './LandingPage';
-import { Methods } from './Methods';
-import { MethodsItem } from './MethodsItem';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { LandingPage } from "@/components/landing/LandingPage";
+import { Methods } from "@/components/landing/Methods";
+import { MethodsItem } from "@/components/landing/MethodsItem";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <LandingPage />,
   },
   {
-    path: '/services',
+    path: "/services",
     element: <Methods />,
   },
   {
-    path: '/services/:method',
+    path: "/services/:method",
     element: <MethodsItem />,
   },
 ]);

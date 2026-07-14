@@ -1,11 +1,11 @@
 "use client";
 
-import { landingContent } from '../../landing/content';
-import { Section } from '../layout/Section';
-import { Link } from 'react-router-dom';
-import Button from '../../ui/button';
-import { toast } from 'react-hot-toast';
-import { Helmet } from 'react-helmet-async';
+import { landingContent } from "../../landing/content";
+import { Section } from "../layout/Section";
+import { Helmet } from "react-helmet-async";
+import { toast } from "react-hot-toast";
+import Button from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function Methods() {
   return (
@@ -16,7 +16,10 @@ export function Methods() {
     >
       <Helmet>
         <title>Услуги / методы неразрушающего контроля</title>
-        <meta name="description" content="Контроль качества сварных соединений различными методами НК." />
+        <meta
+          name="description"
+          content="Контроль качества сварных соединений различными методами НК."
+        />
       </Helmet>
       <div className="cardGrid">
         {landingContent.methods.map((m) => (
@@ -29,7 +32,8 @@ export function Methods() {
             </Link>
             {m.full && (
               <p className="cardText">
-                {m.full} В нашем центре сварных соединений мы проводим контроль качества сварных соединений различными методами НК.
+                {m.full} В нашем центре сварных соединений мы проводим контроль
+                качества сварных соединений различными методами НК.
               </p>
             )}
             <Button
