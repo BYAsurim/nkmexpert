@@ -3,7 +3,6 @@
 import { landingContent } from "../../landing/content";
 import { Section } from "../layout/Section";
 import { Helmet } from "react-helmet-async";
-import { toast } from "react-hot-toast";
 import { MethodCard } from "./MethodCard";
 
 export function Methods() {
@@ -21,12 +20,9 @@ export function Methods() {
         />
       </Helmet>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="cardGrid">
         {landingContent.methods.map((m) => (
-          <MethodCard
-            key={m.short}
-            method={m}
-          />
+          <MethodCard key={m.short} method={m} />
         ))}
       </div>
     </Section>
