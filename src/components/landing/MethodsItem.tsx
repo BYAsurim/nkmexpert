@@ -1,14 +1,14 @@
 "use client";
 
-import { landingContent } from '../../landing/content';
 import { Section } from '../layout/Section';
-import { Link, Button } from 'shadcn/ui';
+import { Link } from 'react-router-dom';
+import Button from '../../ui/button';
 
 export function MethodsItem({ method }) {
   return (
     <article className="card">
       <Link
-        href={`/services/${method.short.toLowerCase()}`}
+        to={`/services/${method.short.toLowerCase()}`}
         className="cardTitle"
       >
         {method.short}
@@ -18,11 +18,7 @@ export function MethodsItem({ method }) {
           {method.full} В нашем центре сварных соединений мы проводим контроль качества сварных соединений различными методами НК.
         </p>
       )}
-      <Button
-        variant="default"
-      >
-        Подробнее
-      </Button>
+      <Button variant="default">Подробнее</Button>
     </article>
   );
 }

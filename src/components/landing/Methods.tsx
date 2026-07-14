@@ -2,7 +2,8 @@
 
 import { landingContent } from '../../landing/content';
 import { Section } from '../layout/Section';
-import { Link, Button } from 'shadcn/ui';
+import { Link } from 'react-router-dom';
+import Button from '../../ui/button';
 import { toast } from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
 
@@ -21,7 +22,7 @@ export function Methods() {
         {landingContent.methods.map((m) => (
           <article key={m.short} className="card">
             <Link
-              href={`/services/${m.short.toLowerCase()}`}
+              to={`/services/${m.short.toLowerCase()}`}
               className="cardTitle"
             >
               {m.short}
