@@ -1,8 +1,8 @@
 "use client";
 
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { landingContent } from "../../landing/content";
-import Button from "@/components/ui/button";
+import { MethodCard } from "./MethodCard";
 
 export function MethodsItem() {
   const { method } = useParams<{ method: string }>();
@@ -11,24 +11,12 @@ export function MethodsItem() {
   );
 
   if (!methodData) {
-    return <div>Метод не найден.</div>;
+    return <div className="text-center py-8 text-muted-foreground">Метод не найден.</div>;
   }
 
   return (
-    <article className="card">
-      <Link
-        to={`/services/${methodData.short.toLowerCase()}`}
-        className="cardTitle"
-      >
-        {methodData.short}
-      </Link>
-      {methodData.full && (
-        <p className="cardText">
-          {methodData.full} В нашем центре сварных соединений мы проводим
-          контроль качества сварных соединений различными методами НК.
-        </p>
-      )}
-      <Button variant="default">Подробнее</Button>
-    </article>
+    <div className="py-8">
+      <MethodCard method={methodData} />
+    </div>
   );
 }

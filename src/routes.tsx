@@ -1,7 +1,7 @@
 "use client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { LandingPage } from "@/components/landing/LandingPage";
+import { LandingPage } from "./landing/LandingPage";
 import { Methods } from "@/components/landing/Methods";
 import { MethodsItem } from "@/components/landing/MethodsItem";
 
