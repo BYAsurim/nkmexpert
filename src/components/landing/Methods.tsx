@@ -2,7 +2,7 @@
 
 import { landingContent } from '../../landing/content';
 import { Section } from '../layout/Section';
-import { Link } from 'shadcn/ui';
+import { Link, Button } from 'ui';
 import { toast } from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
 
@@ -31,12 +31,14 @@ export function Methods() {
                 {m.full} В нашем центре сварных соединений мы проводим контроль качества сварных соединений различными методами НК.
               </p>
             )}
-            <Link
-              href={`/services/${m.short.toLowerCase()}`}
-              className="button buttonPrimary"
+            <Button
+              onClick={() => {
+                toast.success(`Переход на страницу ${m.short}...`);
+              }}
+              variant="default"
             >
               Подробнее
-            </Link>
+            </Button>
           </article>
         ))}
       </div>

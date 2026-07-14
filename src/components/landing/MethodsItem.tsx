@@ -2,7 +2,7 @@
 
 import { landingContent } from '../../landing/content';
 import { Section } from '../layout/Section';
-import { Link } from 'shadcn/ui';
+import { Link, Button } from 'ui';
 
 export function MethodsItem({ method }) {
   return (
@@ -18,12 +18,11 @@ export function MethodsItem({ method }) {
           {method.full} В нашем центре сварных соединений мы проводим контроль качества сварных соединений различными методами НК.
         </p>
       )}
-      <Link
-        href={`/services/${method.short.toLowerCase()}`}
-        className="button buttonPrimary"
+      <Button
+        variant="default"
       >
         Подробнее
-      </Link>
+      </Button>
     </article>
   );
 }
