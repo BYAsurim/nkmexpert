@@ -35,6 +35,77 @@ html {
   padding-bottom: 40px;
 }
 
+/* Общий стиль */
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.buttonPrimary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #06101f;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.buttonPrimary:hover {
+  filter: brightness(1.03);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(43, 116, 255, 0.3);
+}
+
+.buttonGhost {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.buttonGhost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+.link {
+  color: rgba(233, 238, 247, 0.92);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(233, 238, 247, 0.35);
+  transition: all 0.2s;
+}
+
+.link:hover {
+  border-bottom-color: rgba(233, 238, 247, 0.7);
+}
+
 /* Header */
 .siteHeader {
   position: sticky;
