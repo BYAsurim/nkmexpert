@@ -1,8 +1,10 @@
-import { Container } from '../layout/Container'
-import { Section } from '../layout/Section'
-import { Helmet } from "react-helmet-async"
-import { toast } from "react-hot-toast"
-import { MethodCard } from "./MethodCard"
+"use client";
+
+import { landingContent } from "../../landing/content";
+import { Section } from "../layout/Section";
+import { Helmet } from "react-helmet-async";
+import { toast } from "react-hot-toast";
+import { MethodCard } from "./MethodCard";
 
 export function Methods() {
   return (

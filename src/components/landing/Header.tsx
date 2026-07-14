@@ -1,63 +1,43 @@
 import { Container } from '../layout/Container'
+import logo from '../../assets/logo.png'
+
+const navItems = [
+  { href: '#services', label: 'Методы' },
+  { href: '#certifications', label: 'Аттестации' },
+  { href: '#geography', label: 'География' },
+  { href: '#reasons', label: 'Почему мы' },
+  { href: '#contacts', label: 'Контакты' },
+] as const
 
 export function Header() {
   return (
     <header className="siteHeader">
       <Container>
         <div className="siteHeaderInner">
-          <div className="brand">
+          <a className="brand" href="#top" aria-label="Перейти к началу">
             <img
               className="brandLogo"
-              src="/src/assets/logo.png"
+              src={logo}
               alt="НКМ-ЭКСПЕРТ"
               loading="eager"
               decoding="async"
             />
-            <div className="brandText">
-              <div className="brandTitle">Лаборатория неразрушающего контроля</div>
-              <div className="brandLegal">ООО "НКМ-ЭКСПЕРТ"</div>
-            </div>
-          </div>
+            <span className="brandText">
+              <span className="brandTitle">Лаборатория неразрушающего контроля</span>
+              <span className="brandLegal">ООО "НКМ-ЭКСПЕРТ"</span>
+            </span>
+          </a>
 
           <nav className="nav" aria-label="Навигация по странице">
-            <a
-              className="navLink"
-              href="#services"
-              aria-label="Перейти к услугам"
-            >
-              Услуги
-            </a>
-            <a
-              className="navLink"
-              href="#certifications"
-              aria-label="Перейти к аттестациям"
-            >
-              Аттестации
-            </a>
-            <a
-              className="navLink"
-              href="#geography"
-              aria-label="Перейти к географии"
-            >
-              География
-            </a>
-            <a
-              className="navLink"
-              href="#reasons"
-              aria-label="Перейти к причинам"
-            >
-              Причины
-            </a>
-            <a
-              className="navLink"
-              href="#contacts"
-              aria-label="Перейти к контактам"
-            >
-              Контакты
-            </a>
+            {navItems.map((item) => (
+              <a key={item.href} className="navLink" href={item.href}>
+                {item.label}
+              </a>
+            ))}
           </nav>
         </div>
       </Container>
     </header>
   )
 }
+
