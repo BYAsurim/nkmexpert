@@ -2,7 +2,7 @@
 
 import { landingContent } from '../../landing/content';
 import { Section } from '../layout/Section';
-import { Link, Button } from 'ui';
+import { Link, Button } from 'shadcn/ui';
 
 export function MethodsItem({ method }) {
   return (

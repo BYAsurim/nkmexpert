@@ -2,7 +2,7 @@
 
 import { landingContent } from '../../landing/content';
 import { Section } from '../layout/Section';
-import { Link, Button } from 'ui';
+import { Link, Button } from 'shadcn/ui';
 import { toast } from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
 
