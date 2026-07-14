@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
-import Button from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 type Method = {

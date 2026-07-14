@@ -70,6 +70,12 @@ html {
   border-radius: 10px;
   padding: 6px;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.brandLogo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .brandText {
@@ -108,6 +114,7 @@ html {
   padding: 8px 10px;
   border-radius: 10px;
   border: 1px solid transparent;
+  transition: all 0.2s;
 }
 
 .navLink:hover {
@@ -146,6 +153,7 @@ html {
   font-size: 34px;
   line-height: 1.15;
   letter-spacing: 0.2px;
+  color: var(--text);
 }
 
 .heroLead {
@@ -192,6 +200,7 @@ html {
 .kvVal {
   margin: 0;
   font-size: 14px;
+  color: var(--text);
 }
 
 @media (max-width: 980px) {
@@ -218,6 +227,7 @@ html {
   margin: 0;
   font-size: 20px;
   letter-spacing: 0.15px;
+  color: var(--text);
 }
 
 .sectionSubtitle {
@@ -238,11 +248,18 @@ html {
   background: rgba(255, 255, 255, 0.03);
   border-radius: var(--radius);
   padding: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .cardTitle {
   margin: 0 0 6px;
   font-size: 16px;
+  color: var(--text);
 }
 
 .cardText {
@@ -276,6 +293,11 @@ html {
   gap: 14px;
   padding: 14px;
   background: rgba(255, 255, 255, 0.02);
+  transition: background 0.2s;
+}
+
+.docRow:hover {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .docRow + .docRow {
@@ -289,6 +311,7 @@ html {
 
 .docValue {
   font-size: 14px;
+  color: var(--text);
 }
 
 @media (max-width: 720px) {
@@ -342,6 +365,7 @@ html {
   margin: 0 0 6px;
   font-size: 14px;
   font-weight: 650;
+  color: var(--text);
 }
 
 .noteText {
@@ -372,6 +396,7 @@ html {
   cursor: pointer;
   user-select: none;
   white-space: nowrap;
+  transition: all 0.2s;
 }
 
 .buttonPrimary {
@@ -382,6 +407,8 @@ html {
 
 .buttonPrimary:hover {
   filter: brightness(1.03);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(43, 116, 255, 0.3);
 }
 
 .buttonGhost {
@@ -392,12 +419,14 @@ html {
 
 .buttonGhost:hover {
   background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
 }
 
 .link {
   color: rgba(233, 238, 247, 0.92);
   text-decoration: none;
   border-bottom: 1px dotted rgba(233, 238, 247, 0.35);
+  transition: all 0.2s;
 }
 
 .link:hover {
@@ -423,6 +452,7 @@ html {
   font-size: 14px;
   font-weight: 650;
   margin-bottom: 10px;
+  color: var(--text);
 }
 
 .contactRows {
@@ -461,6 +491,7 @@ html {
 .formTitle {
   font-size: 14px;
   font-weight: 650;
+  color: var(--text);
 }
 
 .formHint {
@@ -518,6 +549,7 @@ html {
   padding: 10px 12px;
   font-size: 13px;
   outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .input:focus,
@@ -579,6 +611,7 @@ html {
 .footerTitle {
   font-size: 13px;
   font-weight: 650;
+  color: var(--text);
 }
 
 .footerLegal {
@@ -603,4 +636,3 @@ html {
     align-items: flex-start;
   }
 }
-
