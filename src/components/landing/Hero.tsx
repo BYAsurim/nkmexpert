@@ -23,24 +23,32 @@ export function Hero() {
           </div>
 
           <aside className="heroPanel" aria-label="Ключевая информация">
-            <dl className="kvList">
-              <div className="kvItem">
-                <dt className="kvKey">Методы НК</dt>
-                <dd className="kvVal">{landingContent.methods.map((m) => m.short).join(', ')}</dd>
+            <div className="heroPanelTitle">Ключевые параметры</div>
+            <div className="heroStats">
+              <div className="heroStat">
+                <div className="heroStatValue">20+ лет</div>
+                <div className="heroStatLabel">Опыт сотрудников</div>
               </div>
-              <div className="kvItem">
-                <dt className="kvKey">Нормативы</dt>
-                <dd className="kvVal">ГОСТ, РД</dd>
+              <div className="heroStat">
+                <div className="heroStatValue">24 часа</div>
+                <div className="heroStatLabel">Выезд и расчет</div>
               </div>
-              <div className="kvItem">
-                <dt className="kvKey">География</dt>
-                <dd className="kvVal">РФ, Москва, выезд</dd>
+              <div className="heroStat">
+                <div className="heroStatValue">В день контроля</div>
+                <div className="heroStatLabel">Заключения и отчеты</div>
               </div>
-            </dl>
+              <div className="heroStat">
+                <div className="heroStatValue">По всей РФ</div>
+                <div className="heroStatLabel">География работ</div>
+              </div>
+            </div>
+            <div className="heroNote">
+              Контроль сварных швов, трубопроводов, металлоконструкций и резервуаров. Сопутствующие
+              услуги: механические испытания, стилоскопирование и другие работы по НК.
+            </div>
           </aside>
         </div>
       </Container>
     </section>
   )
 }
-

@@ -34,7 +34,7 @@ export const landingContent = {
     { short: 'ЭК', full: 'Электрический контроль' },
   ] satisfies MethodItem[],
   documents: [
-    { label: 'Аттестация лаборатории', value: 'СНК № ЛНК-098А0140' },
+    { label: 'Аттестация лаборатории', value: 'СНК № ЛНК-098А0140*' },
     { label: 'Аттестация персонала', value: 'II уровень' },
     { label: 'Нормативная база', value: 'Работы выполняются по ГОСТ и РД' },
   ] satisfies DocumentItem[],

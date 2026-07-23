@@ -11,6 +11,13 @@ export function Contacts() {
     {},
   )
 
+  const hasSubmissionError = Boolean(state.errors && Object.keys(state.errors).length > 0)
+  const submissionMessage = state.succeeded
+    ? 'Заявка отправлена. Мы свяжемся с вами по указанным контактным данным.'
+    : hasSubmissionError
+      ? 'Не удалось отправить заявку. Проверьте данные и попробуйте снова.'
+      : null
+
   const handleSubmitWithValidation = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
@@ -36,16 +43,15 @@ export function Contacts() {
     }
 
     setClientErrors({})
+    reset()
     await handleSubmit(event)
   }
 
   useEffect(() => {
     if (state.succeeded) {
       formRef.current?.reset()
-      reset()
-      setClientErrors({})
     }
-  }, [reset, state.succeeded])
+  }, [state.succeeded])
 
   return (
     <Section
@@ -87,10 +93,7 @@ export function Contacts() {
           onSubmit={handleSubmitWithValidation}
         >
           <div className="formHeader">
-            <div className="formTitle">Заявка</div>
-            <div className="formHint">
-              После заполнения можно открыть письмо по кнопке «Подготовить письмо».
-            </div>
+            <div className="formTitle">Заявка</div>        
           </div>
 
           <div className="formGrid">
@@ -195,9 +198,13 @@ export function Contacts() {
             </button>
           </div>
 
-          {state.succeeded && (
-            <div className="formNotice" role="status">
-              Заявка отправлена. Мы свяжемся с вами по указанным контактным данным.
+          {submissionMessage && (
+            <div
+              className={`formNotice${hasSubmissionError ? ' formNoticeError' : ''}`}
+              role={hasSubmissionError ? 'alert' : 'status'}
+              aria-live="polite"
+            >
+              {submissionMessage}
             </div>
           )}
         </form>
@@ -205,4 +212,3 @@ export function Contacts() {
     </Section>
   )
 }
-
